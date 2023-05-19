@@ -14,6 +14,8 @@
 		7EACE70D2A1816F300499336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE70C2A1816F300499336 /* Assets.xcassets */; };
 		7EACE7102A1816F300499336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE70E2A1816F300499336 /* LaunchScreen.storyboard */; };
 		7EACE71B2A181F7100499336 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE71A2A181F7100499336 /* InfoViewController.swift */; };
+		7EACE71D2A18317D00499336 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE71C2A18317D00499336 /* SettingsViewController.swift */; };
+		7EACE7212A1838B300499336 /* KGRedHands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE7202A1838B300499336 /* KGRedHands.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7EACE70F2A1816F300499336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EACE7112A1816F300499336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EACE71A2A181F7100499336 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		7EACE71C2A18317D00499336 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7EACE7202A1838B300499336 /* KGRedHands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KGRedHands.ttf; path = ../../../../../Downloads/kg_red_hands/KGRedHands.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		7EACE7022A1816F000499336 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				7EACE71E2A18382800499336 /* Fonts */,
 				7EACE7172A1816FD00499336 /* AppDelegate */,
 				7EACE7182A18170900499336 /* Controllers */,
 				7EACE7192A18171200499336 /* Views */,
@@ -81,6 +86,7 @@
 			children = (
 				7EACE7072A1816F000499336 /* MainViewController.swift */,
 				7EACE71A2A181F7100499336 /* InfoViewController.swift */,
+				7EACE71C2A18317D00499336 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -92,6 +98,14 @@
 				7EACE70E2A1816F300499336 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7EACE71E2A18382800499336 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7EACE7202A1838B300499336 /* KGRedHands.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EACE7102A1816F300499336 /* LaunchScreen.storyboard in Resources */,
+				7EACE7212A1838B300499336 /* KGRedHands.ttf in Resources */,
 				7EACE70D2A1816F300499336 /* Assets.xcassets in Resources */,
 				7EACE70B2A1816F000499336 /* Main.storyboard in Resources */,
 			);
@@ -168,6 +183,7 @@
 				7EACE7082A1816F000499336 /* MainViewController.swift in Sources */,
 				7EACE7042A1816F000499336 /* AppDelegate.swift in Sources */,
 				7EACE71B2A181F7100499336 /* InfoViewController.swift in Sources */,
+				7EACE71D2A18317D00499336 /* SettingsViewController.swift in Sources */,
 				7EACE7062A1816F000499336 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

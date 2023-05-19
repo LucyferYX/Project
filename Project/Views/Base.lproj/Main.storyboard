@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -8,7 +8,28 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="KGRedHands.ttf">
+            <string>KGRedHands</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="6NE-VB-z3R">
+            <objects>
+                <viewController id="Oie-gC-jn8" customClass="SettingsViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Uf-H7-I4R" customClass="Sett">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HLh-tz-A1g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IQ8-iE-tnt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vp5-65-aXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="-415"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,30 +41,58 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG-1" translatesAutoresizingMaskIntoConstraints="NO" id="bhP-nC-9gP">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg4-1u-Sxw">
-                                <rect key="frame" x="286" y="88" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg4-1u-Sxw">
+                                <rect key="frame" x="298" y="88" width="70" height="70"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="tintColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="InfoButton" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                     <color key="baseForegroundColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="InfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chs-eu-nyO"/>
+                                    <segue destination="9jd-zQ-dpc" kind="show" id="vzy-lk-z4J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-RY-JoB">
+                                <rect key="frame" x="25" y="88" width="70" height="70"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <color key="tintColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="SettingsButton" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                    <color key="baseForegroundColor" red="0.96880429980000005" green="0.92074924709999995" blue="0.88768655060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="InfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deH-iK-A0q"/>
+                                    <segue destination="Oie-gC-jn8" kind="show" id="cLG-Gz-UCR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nature Sounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-FP-LXD">
+                                <rect key="frame" x="77" y="201" width="238" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0037908032536506653" green="0.99251192808151245" blue="0.81239914894104004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="30"/>
+                                <color key="textColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="leading" secondItem="CEC-RY-JoB" secondAttribute="trailing" constant="173" id="9pu-fg-6mQ"/>
+                            <constraint firstItem="CEC-RY-JoB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="D1y-2h-s5m"/>
                             <constraint firstItem="bhP-nC-9gP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-59" id="L2t-te-fsY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CEC-RY-JoB" secondAttribute="bottom" constant="660" id="LAj-f6-9eD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lg4-1u-Sxw" secondAttribute="bottom" constant="660" id="Ob4-3r-FRv"/>
                             <constraint firstItem="bhP-nC-9gP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VMm-Xr-klg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhP-nC-9gP" secondAttribute="bottom" constant="-34" id="cGg-xR-CfW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhP-nC-9gP" secondAttribute="trailing" id="cfV-8y-oIK"/>
                             <constraint firstItem="lg4-1u-Sxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="286" id="dVY-l6-u6F"/>
+                            <constraint firstItem="CEC-RY-JoB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="jrN-ei-PLQ"/>
                             <constraint firstItem="lg4-1u-Sxw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="kbh-89-IXU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lg4-1u-Sxw" secondAttribute="trailing" constant="37" id="rRx-ra-DLp"/>
                         </constraints>
@@ -58,23 +107,22 @@
             <objects>
                 <viewController id="9jd-zQ-dpc" customClass="InfoViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oHY-V9-Wsi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="H0C-BN-GuX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rO6-Xm-4vr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWG-DA-vIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="689"/>
+            <point key="canvasLocation" x="960" y="240"/>
         </scene>
     </scenes>
     <resources>
         <image name="BG-1" width="2000" height="2992"/>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="InfoButton" width="50" height="50"/>
+        <image name="SettingsButton" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

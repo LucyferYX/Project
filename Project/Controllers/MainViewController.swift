@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
 
     
     @IBAction func InfoButton(_ sender: UIButton) {
-        let customConfig = UIImage.SymbolConfiguration(pointSize: 200)
+        
     }
     
 }
