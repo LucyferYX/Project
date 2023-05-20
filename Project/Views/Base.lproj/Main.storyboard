@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -39,68 +39,87 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG-1" translatesAutoresizingMaskIntoConstraints="NO" id="bhP-nC-9gP">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="-6" y="0.0" width="406" height="729"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg4-1u-Sxw">
-                                <rect key="frame" x="298" y="88" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-RY-JoB">
+                                <rect key="frame" x="35" y="758" width="60" height="60"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <color key="tintColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="InfoButton" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                    <color key="baseForegroundColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="InfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chs-eu-nyO"/>
-                                    <segue destination="9jd-zQ-dpc" kind="show" id="vzy-lk-z4J"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-RY-JoB">
-                                <rect key="frame" x="25" y="88" width="70" height="70"/>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <color key="tintColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="SettingsButton" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                    <color key="baseForegroundColor" red="0.96880429980000005" green="0.92074924709999995" blue="0.88768655060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
+                                <color key="tintColor" red="0.062011890113353729" green="0.21683046221733093" blue="0.21397706866264343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.96880429980000005" green="0.92074924709999995" blue="0.88768655060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
                                 <connections>
                                     <action selector="InfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deH-iK-A0q"/>
                                     <segue destination="Oie-gC-jn8" kind="show" id="cLG-Gz-UCR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nature Sounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-FP-LXD">
-                                <rect key="frame" x="77" y="201" width="238" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nature Sounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-FP-LXD">
+                                <rect key="frame" x="76.999999999999986" y="109" width="237.66666666666663" height="40"/>
                                 <color key="tintColor" red="0.0037908032536506653" green="0.99251192808151245" blue="0.81239914894104004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="30"/>
                                 <color key="textColor" red="0.96880429983139038" green="0.9207492470741272" blue="0.88768655061721802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg4-1u-Sxw">
+                                <rect key="frame" x="298" y="758" width="60" height="60"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <color key="tintColor" red="0.062011890113353729" green="0.21683046221733093" blue="0.21397706866264343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.057429045438766479" green="0.17499807476997375" blue="0.16516321897506714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="InfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chs-eu-nyO"/>
+                                    <segue destination="9jd-zQ-dpc" kind="show" id="vzy-lk-z4J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P26-yS-Af3">
+                                <rect key="frame" x="157" y="689" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="C9i-Ng-obf"/>
+                                    <constraint firstAttribute="width" constant="80" id="Q1g-Sz-Kgu"/>
+                                </constraints>
+                                <color key="tintColor" red="0.057429045438766479" green="0.17499807476997375" blue="0.16516321897506714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="ArrowButton"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="leading" secondItem="CEC-RY-JoB" secondAttribute="trailing" constant="173" id="9pu-fg-6mQ"/>
-                            <constraint firstItem="CEC-RY-JoB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="D1y-2h-s5m"/>
+                            <constraint firstItem="P26-yS-Af3" firstAttribute="leading" secondItem="CEC-RY-JoB" secondAttribute="trailing" constant="62" id="3Ea-jg-atZ"/>
+                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="leading" secondItem="CEC-RY-JoB" secondAttribute="trailing" constant="203" id="9pu-fg-6mQ"/>
+                            <constraint firstItem="CEC-RY-JoB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="D1y-2h-s5m"/>
+                            <constraint firstItem="P26-yS-Af3" firstAttribute="top" secondItem="DFT-FP-LXD" secondAttribute="bottom" constant="540" id="F1p-wt-uHD"/>
                             <constraint firstItem="bhP-nC-9gP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-59" id="L2t-te-fsY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CEC-RY-JoB" secondAttribute="bottom" constant="660" id="LAj-f6-9eD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lg4-1u-Sxw" secondAttribute="bottom" constant="660" id="Ob4-3r-FRv"/>
-                            <constraint firstItem="bhP-nC-9gP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VMm-Xr-klg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhP-nC-9gP" secondAttribute="bottom" constant="-34" id="cGg-xR-CfW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhP-nC-9gP" secondAttribute="trailing" id="cfV-8y-oIK"/>
-                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="286" id="dVY-l6-u6F"/>
-                            <constraint firstItem="CEC-RY-JoB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="jrN-ei-PLQ"/>
-                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="kbh-89-IXU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lg4-1u-Sxw" secondAttribute="trailing" constant="37" id="rRx-ra-DLp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CEC-RY-JoB" secondAttribute="bottom" id="LAj-f6-9eD"/>
+                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="leading" secondItem="P26-yS-Af3" secondAttribute="trailing" constant="61" id="MU0-cm-b99"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lg4-1u-Sxw" secondAttribute="bottom" id="Ob4-3r-FRv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DFT-FP-LXD" secondAttribute="trailing" constant="78.329999999999998" id="Tcd-zc-E2I"/>
+                            <constraint firstItem="bhP-nC-9gP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-6" id="VMm-Xr-klg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhP-nC-9gP" secondAttribute="bottom" constant="89" id="cGg-xR-CfW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhP-nC-9gP" secondAttribute="trailing" constant="-7" id="cfV-8y-oIK"/>
+                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="298" id="dVY-l6-u6F"/>
+                            <constraint firstItem="CEC-RY-JoB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="699" id="jrN-ei-PLQ"/>
+                            <constraint firstItem="lg4-1u-Sxw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="699" id="kbh-89-IXU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P26-yS-Af3" secondAttribute="bottom" constant="49" id="kg6-h1-r7M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lg4-1u-Sxw" secondAttribute="trailing" constant="35" id="rRx-ra-DLp"/>
+                            <constraint firstItem="DFT-FP-LXD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="rY7-HT-ozR"/>
+                            <constraint firstItem="DFT-FP-LXD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="rhR-XJ-ytp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BG" destination="bhP-nC-9gP" id="ikR-Sm-KR6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="-2.2167487684729066"/>
+            <point key="canvasLocation" x="45.038167938931295" y="-2.8169014084507045"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="3HL-il-u8y">
@@ -109,6 +128,15 @@
                     <view key="view" contentMode="scaleToFill" id="oHY-V9-Wsi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wt-qJ-jP6">
+                                <rect key="frame" x="75" y="121" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="H0C-BN-GuX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -120,9 +148,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ArrowButton" width="512" height="512"/>
         <image name="BG-1" width="2000" height="2992"/>
-        <image name="InfoButton" width="50" height="50"/>
-        <image name="SettingsButton" width="50" height="50"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
