@@ -1,13 +1,13 @@
 //
-//  InfoViewController.swift
+//  SoundViewController.swift
 //  Project
 //
-//  Created by liene.krista.neimane on 20/05/2023.
+//  Created by liene.krista.neimane on 22/05/2023.
 //
 
 import UIKit
 
-class InfoViewController: UIViewController {
+class SoundViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
