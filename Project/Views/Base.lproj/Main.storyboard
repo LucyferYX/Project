@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gAR-Zy-J9X">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -62,7 +62,7 @@
                                 <rect key="frame" x="39" y="758" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <color key="tintColor" red="0.062011890113353729" green="0.21683046221733093" blue="0.21397706866264343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.093830205500125885" green="0.49252080917358398" blue="0.264996737241745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.96880429980000005" green="0.92074924709999995" blue="0.88768655060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,10 +88,10 @@
                                 <rect key="frame" x="297" y="758" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <color key="tintColor" red="0.062011890113353729" green="0.21683046221733093" blue="0.21397706866264343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.093830205500125885" green="0.49252080917358398" blue="0.264996737241745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.057429045438766479" green="0.17499807476997375" blue="0.16516321897506714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.082798488438129425" green="0.34726583957672119" blue="0.21787455677986145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
                                 </state>
@@ -119,7 +119,7 @@
                         <switch key="titleView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="ThemeSlider" id="nSP-9j-dp9">
                             <rect key="frame" x="171" y="6.6666666666666679" width="51" height="31.000000000000004"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="onTintColor" red="0.62798595428466797" green="0.86212509870529175" blue="0.91832488775253296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="onTintColor" red="0.093830205500125885" green="0.49252080917358398" blue="0.264996737241745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="ThemeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="UDL-c3-Gd1"/>
                             </connections>
