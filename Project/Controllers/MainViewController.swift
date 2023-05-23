@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var SettingsButton: UIButton!
     @IBOutlet weak var InfoButton: UIButton!
     @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var Photos: UIImageView!
+    @IBOutlet weak var SoundLabel: UILabel!
     
     var darkIsOn: Bool = false
     let appearance = UINavigationBarAppearance()
@@ -28,8 +30,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         darkThemeIsOn(isOn: ThemeSwitch.isOn)
-        
-        // appearance.configureWithDefaultBackground()
+        loadImages()
+        updateImageTransition()
+        stylePhotos()
+        SoundLabel.alpha = 0.0
         // Do any additional setup after loading the view.
     }
     
@@ -75,6 +79,7 @@ class MainViewController: UIViewController {
             SettingsButton.tintColor = customGreen
             InfoButton.tintColor = customGreen
             TitleLabel.textColor = customYellow
+            SoundLabel.textColor = customYellow
             UINavigationBar.appearance().tintColor = customGreen
             overrideUserInterfaceStyle = .dark
             appearance.buttonAppearance.normal.titleTextAttributes = [.foregroundColor: customGreen]
@@ -85,6 +90,7 @@ class MainViewController: UIViewController {
             SettingsButton.tintColor = customPink
             InfoButton.tintColor = customPink
             TitleLabel.textColor = customBlue
+            SoundLabel.textColor = customBlue
             UINavigationBar.appearance().tintColor = customPink
             overrideUserInterfaceStyle = .light
             appearance.buttonAppearance.normal.titleTextAttributes = [.foregroundColor: customPink]
@@ -103,7 +109,68 @@ class MainViewController: UIViewController {
     }
     
     
-    // Showcasing images in main screen
+    // Appearance for Photos
+    func stylePhotos() {
+        // Clip to bounds allows to have rounded corners
+        Photos.layer.cornerRadius = 20
+        Photos.clipsToBounds = true
+        Photos.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+    }
+
     
+    // Showcasing images in main screen
+    var images: [UIImage] = []
+    var imagesShuffle: [UIImage] = []
+    var imgIndex = 0
+    var timer: Timer?
+    
+    func loadImages() {
+        images.append(UIImage(named: "image1")!)
+        images.append(UIImage(named: "image2")!)
+        images.append(UIImage(named: "image3")!)
+        images.append(UIImage(named: "image4")!)
+        images.append(UIImage(named: "image5")!)
+        images.append(UIImage(named: "image6")!)
+        imagesShuffle = images.shuffled()
+    }
+    
+    func startTransitioningImages() {
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] timer in
+            guard let self = self else { return }
+            let toImage = self.imagesShuffle[self.imgIndex]
+            UIView.transition(with: self.Photos,
+                              duration: 1.0,
+                              options: .transitionCrossDissolve,
+                              animations: { self.Photos.image = toImage },
+                              completion: nil)
+
+            // Update the index, reshuffle the images if end is reached
+            self.imgIndex += 1
+            if self.imgIndex >= self.imagesShuffle.count {
+                self.imgIndex = 0
+                self.imagesShuffle = self.images.shuffled()
+            }
+        }
+    }
+    
+    func stopTransitioningImages() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    func updateImageTransition() {
+        if (true) {
+            startTransitioningImages()
+            UIView.animate(withDuration: 1.0) {
+                self.SoundLabel.alpha = 0.0
+            }
+        } else {
+            stopTransitioningImages()
+            Photos.image = nil
+            UIView.animate(withDuration: 1.0) {
+                self.SoundLabel.alpha = 1.0
+            }
+        }
+    }
     
 }
