@@ -45,6 +45,7 @@ class MainViewController: UIViewController {
     }
 
     
+    // For viewing setttings
     @IBAction func SettingsButtonTap(_ sender: UIButton) {
     }
     
@@ -100,4 +101,9 @@ class MainViewController: UIViewController {
             self.present(alert, animated: true)
         }
     }
+    
+    
+    // Showcasing images in main screen
+    
+    
 }
