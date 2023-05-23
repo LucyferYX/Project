@@ -159,7 +159,7 @@ class MainViewController: UIViewController {
     }
     
     func updateImageTransition() {
-        if (true) {
+        if (true) {  // We will change this later after creating SoundViewController
             startTransitioningImages()
             UIView.animate(withDuration: 1.0) {
                 self.SoundLabel.alpha = 0.0

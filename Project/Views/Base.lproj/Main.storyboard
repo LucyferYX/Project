@@ -29,24 +29,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vp5-65-aXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="-415"/>
+            <point key="canvasLocation" x="1750" y="-361"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Sound View Controller-->
         <scene sceneID="4Tb-eJ-FCN">
             <objects>
-                <tableViewController id="4hD-Lp-7zA" sceneMemberID="viewController">
+                <tableViewController id="4hD-Lp-7zA" customClass="SoundViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="C0U-Kh-71E">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5pV-ri-q9A">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundCell" id="5pV-ri-q9A" customClass="SoundCell" customModule="Project">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5pV-ri-q9A" id="9Nc-tJ-9In">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKu-Ok-ck9">
+                                            <rect key="frame" x="20" y="11" width="45" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7yX-uP-e59">
+                                            <rect key="frame" x="326" y="6" width="49" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="onTintColor" red="0.093830205500125885" green="0.49252080917358398" blue="0.264996737241745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </switch>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="soundLabel" destination="YKu-Ok-ck9" id="lzU-5N-1gz"/>
+                                    <outlet property="soundSwitch" destination="7yX-uP-e59" id="ber-xG-7yV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,26 +72,11 @@
                             <outlet property="delegate" destination="4hD-Lp-7zA" id="Dff-M2-uXa"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="FFe-kk-FaS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHf-nA-rSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3207" y="-4"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qMQ-dy-iuf">
-            <objects>
-                <viewController id="4iV-1m-3Ky" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oWY-0t-jbk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="1Pn-uQ-T4l"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fby-jl-T1m"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FdX-I6-8d4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2506" y="-3"/>
+            <point key="canvasLocation" x="2478.6259541984732" y="-3.5211267605633805"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -135,7 +138,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="ArrowButton"/>
                                 <connections>
-                                    <segue destination="4iV-1m-3Ky" kind="show" id="fao-gg-YYx"/>
+                                    <segue destination="4hD-Lp-7zA" kind="show" id="Ddl-jI-3VU"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Dy-Ur-ki1">

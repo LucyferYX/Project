@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E5D27702A1ACD8500B933B1 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D276F2A1ACD8500B933B1 /* SoundViewController.swift */; };
+		7E39386D2A1D055C00818DE6 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E39386C2A1D055C00818DE6 /* SoundViewController.swift */; };
+		7E39386F2A1D0EC100818DE6 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E39386E2A1D0EC100818DE6 /* SoundCell.swift */; };
 		7E5D27732A1ACF3B00B933B1 /* JumpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */; };
 		7EACE7042A1816F000499336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE7032A1816F000499336 /* AppDelegate.swift */; };
 		7EACE7062A1816F000499336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE7052A1816F000499336 /* SceneDelegate.swift */; };
@@ -20,7 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E5D276F2A1ACD8500B933B1 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		7E39386C2A1D055C00818DE6 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		7E39386E2A1D0EC100818DE6 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpButton.swift; sourceTree = "<group>"; };
 		7EACE7002A1816F000499336 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EACE7032A1816F000499336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */,
+				7E39386E2A1D0EC100818DE6 /* SoundCell.swift */,
 			);
 			path = ExtraResources;
 			sourceTree = "<group>";
@@ -97,7 +100,7 @@
 			children = (
 				7EACE7072A1816F000499336 /* MainViewController.swift */,
 				7EACE71C2A18317D00499336 /* SettingsViewController.swift */,
-				7E5D276F2A1ACD8500B933B1 /* SoundViewController.swift */,
+				7E39386C2A1D055C00818DE6 /* SoundViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,11 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EACE7082A1816F000499336 /* MainViewController.swift in Sources */,
+				7E39386F2A1D0EC100818DE6 /* SoundCell.swift in Sources */,
 				7EACE7042A1816F000499336 /* AppDelegate.swift in Sources */,
 				7EACE71D2A18317D00499336 /* SettingsViewController.swift in Sources */,
 				7E5D27732A1ACF3B00B933B1 /* JumpButton.swift in Sources */,
+				7E39386D2A1D055C00818DE6 /* SoundViewController.swift in Sources */,
 				7EACE7062A1816F000499336 /* SceneDelegate.swift in Sources */,
-				7E5D27702A1ACD8500B933B1 /* SoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
