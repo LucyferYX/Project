@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E39386D2A1D055C00818DE6 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E39386C2A1D055C00818DE6 /* SoundViewController.swift */; };
 		7E39386F2A1D0EC100818DE6 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E39386E2A1D0EC100818DE6 /* SoundCell.swift */; };
+		7E3938712A1DF61500818DE6 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3938702A1DF61500818DE6 /* AppearanceManager.swift */; };
 		7E5D27732A1ACF3B00B933B1 /* JumpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */; };
 		7EACE7042A1816F000499336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE7032A1816F000499336 /* AppDelegate.swift */; };
 		7EACE7062A1816F000499336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE7052A1816F000499336 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		7E39386C2A1D055C00818DE6 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 		7E39386E2A1D0EC100818DE6 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
+		7E3938702A1DF61500818DE6 /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpButton.swift; sourceTree = "<group>"; };
 		7EACE7002A1816F000499336 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EACE7032A1816F000499336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			children = (
 				7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */,
 				7E39386E2A1D0EC100818DE6 /* SoundCell.swift */,
+				7E3938702A1DF61500818DE6 /* AppearanceManager.swift */,
 			);
 			path = ExtraResources;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				7EACE7042A1816F000499336 /* AppDelegate.swift in Sources */,
 				7EACE71D2A18317D00499336 /* SettingsViewController.swift in Sources */,
 				7E5D27732A1ACF3B00B933B1 /* JumpButton.swift in Sources */,
+				7E3938712A1DF61500818DE6 /* AppearanceManager.swift in Sources */,
 				7E39386D2A1D055C00818DE6 /* SoundViewController.swift in Sources */,
 				7EACE7062A1816F000499336 /* SceneDelegate.swift in Sources */,
 			);

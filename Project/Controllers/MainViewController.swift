@@ -33,7 +33,8 @@ class MainViewController: UIViewController {
         loadImages()
         updateImageTransition()
         stylePhotos()
-        SoundLabel.alpha = 0.0
+        SoundLabel.alpha = 0.9
+        self.view.backgroundColor = .red
         // Do any additional setup after loading the view.
     }
     
@@ -42,9 +43,9 @@ class MainViewController: UIViewController {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     @IBAction func InfoButtonTap(_ sender: UIButton) {
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            basicActionAlert(title: "App information", message: "Creator: Liene Krista Neimane\nDate: 22.05.23.\nCourse: iOS Bootcamp\nv\(appVersion)")
+            basicActionAlert(title: "App information", message: "Creator: Liene Krista Neimane\nDate: 24.05.23.\nCourse: iOS Bootcamp\nv\(appVersion)")
         } else {
-            basicActionAlert(title: "App information", message: "Creator: Me\nDate: 22.05.23.\nCourse: B\nVersion information not available")
+            basicActionAlert(title: "App information", message: "Creator: Me\nDate: 24.05.23.\nCourse: B\nVersion information not available")
         }
     }
 
@@ -73,6 +74,7 @@ class MainViewController: UIViewController {
     }
     
     func darkThemeIsOn(isOn: Bool){
+        AppearanceManager.shared.isDarkModeEnabled = isOn
         if isOn {
             // Dark theme
             BG.backgroundColor = UIColor.black
@@ -158,18 +160,11 @@ class MainViewController: UIViewController {
         timer = nil
     }
     
+    // The length of image showcase
     func updateImageTransition() {
-        if (true) {  // We will change this later after creating SoundViewController
-            startTransitioningImages()
-            UIView.animate(withDuration: 1.0) {
-                self.SoundLabel.alpha = 0.0
-            }
-        } else {
-            stopTransitioningImages()
-            Photos.image = nil
-            UIView.animate(withDuration: 1.0) {
-                self.SoundLabel.alpha = 1.0
-            }
+        startTransitioningImages()
+        UIView.animate(withDuration: 1.0) {
+            self.SoundLabel.alpha = 0.9
         }
     }
     
