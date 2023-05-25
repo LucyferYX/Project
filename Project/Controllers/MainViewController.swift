@@ -7,6 +7,18 @@
 
 import UIKit
 
+// Settings is connected by modal view, the background colour won't immediately change
+protocol SettingsDelegate: AnyObject {
+    func didUpdateSettings()
+}
+
+extension MainViewController: SettingsDelegate {
+    func didUpdateSettings() {
+        view.backgroundColor = AppearanceManager.shared.backgroundColor
+        darkThemeIsOn(isOn: ThemeSwitch.isOn)
+    }
+}
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var ThemeSwitch: UISwitch!
@@ -19,12 +31,12 @@ class MainViewController: UIViewController {
     var darkIsOn: Bool = false
     let appearance = UINavigationBarAppearance()
     
+    
     // Custom colours
     let customGreen = UIColor(red: 36/255, green: 79/255, blue: 37/255, alpha: 1)
     let customPink = UIColor(red: 0.85, green: 0.61, blue: 0.86, alpha: 1)
     let customYellow = UIColor(red: 0.94, green: 0.92, blue: 0.75, alpha: 1)
     let customBlue = UIColor(red: 0.41, green: 0.35, blue: 0.59, alpha: 1)
-    
 
     
     override func viewDidLoad() {
@@ -34,8 +46,20 @@ class MainViewController: UIViewController {
         updateImageTransition()
         stylePhotos()
         SoundLabel.alpha = 0.9
-        self.view.backgroundColor = .red
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor = AppearanceManager.shared.backgroundColor
+        darkThemeIsOn(isOn: ThemeSwitch.isOn)
+    }
+    
+    // Segue action will trigger Main view to do any action, like change background color, otherwise modal view does not count in viewDidLoad
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSettingsSegue", let settingsViewController = segue.destination as? SettingsViewController {
+            settingsViewController.delegate = self
+        }
     }
     
     
@@ -70,6 +94,7 @@ class MainViewController: UIViewController {
     
     // Light and dark theme slider
     @IBAction func ThemeSlider(_ sender: UISwitch) {
+        AppearanceManager.shared.isDarkModeEnabled = sender.isOn
         darkThemeIsOn(isOn: sender.isOn)
     }
     

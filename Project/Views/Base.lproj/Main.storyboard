@@ -24,8 +24,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="ZWL-zy-opZ">
+                                <rect key="frame" x="44" y="126" width="304" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-uQ-2vp">
+                                <rect key="frame" x="40" y="415" width="304" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sGl-7s-nDX">
-                                <rect key="frame" x="104" y="317" width="184" height="30"/>
+                                <rect key="frame" x="104" y="274" width="184" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="brightnessSliderValue:" destination="Oie-gC-jn8" eventType="valueChanged" id="oNS-QN-jEe"/>
@@ -33,57 +41,74 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dU-sH-bgT">
-                                <rect key="frame" x="139" y="273" width="115" height="27"/>
+                                <rect key="frame" x="139" y="230" width="115" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="naQ-9M-SYB">
-                                <rect key="frame" x="104" y="449" width="184" height="30"/>
+                                <rect key="frame" x="104" y="406" width="184" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="volumeSliderValueChanged:" destination="Oie-gC-jn8" eventType="valueChanged" id="U66-2o-yYp"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsO-C5-3Zj">
-                                <rect key="frame" x="156" y="405" width="81" height="27"/>
+                                <rect key="frame" x="156" y="362" width="81" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwi-Qk-ty2">
-                                <rect key="frame" x="122" y="550" width="149" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listen to more tunes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwi-Qk-ty2">
+                                <rect key="frame" x="81" y="551" width="233" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Freesound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-uc-u8a">
-                                <rect key="frame" x="140" y="602" width="114" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Freesound.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-uc-u8a">
+                                <rect key="frame" x="114" y="599" width="158" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
                                 <color key="textColor" red="0.093830205500125885" green="0.49252080917358398" blue="0.264996737241745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" name="AccentColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X6-LH-HGR">
-                                <rect key="frame" x="162" y="114" width="69" height="27"/>
+                                <rect key="frame" x="162" y="65" width="69" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rKk-eZ-Px7">
-                                <rect key="frame" x="45" y="180" width="304" height="32"/>
+                                <rect key="frame" x="44" y="120" width="304" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Magenta"/>
-                                    <segment title="Yellow"/>
-                                    <segment title="Cyan"/>
+                                    <segment title="System"/>
+                                    <segment title="Green"/>
+                                    <segment title="Brown"/>
+                                    <segment title="Purple"/>
                                 </segments>
+                                <connections>
+                                    <action selector="colorSegmentValueChanged:" destination="Oie-gC-jn8" eventType="valueChanged" id="IZb-DY-L5Z"/>
+                                </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Look at more photos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fA-bZ-9ZE">
+                                <rect key="frame" x="79" y="654" width="235" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsplash.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLe-Xv-1lU">
+                                <rect key="frame" x="119" y="701" width="146" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
+                                <color key="textColor" red="0.0938302055" green="0.49252080920000002" blue="0.2649967372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HLh-tz-A1g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,7 +120,9 @@
                         <outlet property="ColourLabel" destination="1X6-LH-HGR" id="kYh-GP-5Mz"/>
                         <outlet property="ColourSegment" destination="rKk-eZ-Px7" id="gIx-Z0-yOz"/>
                         <outlet property="CreditsLabel" destination="rwi-Qk-ty2" id="Rke-te-vC9"/>
+                        <outlet property="CreditsLabel2" destination="6fA-bZ-9ZE" id="JEt-VL-tQ2"/>
                         <outlet property="LinkLabel" destination="8OA-uc-u8a" id="NxY-9K-qt3"/>
+                        <outlet property="LinkLabel2" destination="LLe-Xv-1lU" id="mf1-IN-rMd"/>
                         <outlet property="VolumeLabel" destination="SsO-C5-3Zj" id="cSA-bE-c4Q"/>
                         <outlet property="VolumeSlider" destination="naQ-9M-SYB" id="Pbj-Sy-age"/>
                     </connections>
@@ -144,7 +171,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="soundLabel" destination="YKu-Ok-ck9" id="lzU-5N-1gz"/>
-                                    <outlet property="soundSwitch" destination="7yX-uP-e59" id="ber-xG-7yV"/>
+                                    <outlet property="soundSwitch" destination="7yX-uP-e59" id="ERQ-NE-2g7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -156,6 +183,7 @@
                     <navigationItem key="navigationItem" id="FFe-kk-FaS"/>
                     <connections>
                         <outlet property="searchBar" destination="tzL-VL-aHx" id="zWG-Zh-L15"/>
+                        <outlet property="tableView" destination="C0U-Kh-71E" id="3Du-cS-koj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHf-nA-rSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,7 +220,7 @@
                                 </state>
                                 <connections>
                                     <action selector="SettingsButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KO3-26-YRn"/>
-                                    <segue destination="Oie-gC-jn8" kind="popoverPresentation" popoverAnchorView="CEC-RY-JoB" id="qoT-TY-66K">
+                                    <segue destination="Oie-gC-jn8" kind="popoverPresentation" identifier="ShowSettingsSegue" popoverAnchorView="CEC-RY-JoB" id="qoT-TY-66K">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -329,6 +357,7 @@
     <resources>
         <image name="ArrowButton" width="512" height="512"/>
         <image name="BG-1" width="2000" height="2992"/>
+        <image name="Line" width="1200" height="1200"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
