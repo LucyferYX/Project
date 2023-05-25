@@ -71,6 +71,7 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
     }
     
     
+    // All of the sounds
     func loadSounds() {
         sounds = [
             Sound(name: "Artic Wind", filename: "arctic-wind"),
@@ -78,8 +79,10 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
             Sound(name: "Forest Summer", filename: "forest-summer"),
             Sound(name: "Wind in trees with birds", filename: "wind-in-the-trees-with-birds"),
             Sound(name: "Birds in action", filename: "birds-in-action"),
-            Sound(name: "Moderate Rain", filename: "rain-moderate-a")
-
+            Sound(name: "Moderate Rain", filename: "rain-moderate-a"),
+            Sound(name: "Bird Chirps", filename: "bird-chirps3"),
+            Sound(name: "Rain and Thunder", filename: "rain-and-thunder-4"),
+            Sound(name: "Bird whistling", filename: "bird-whistling-a")
         ]
         tableView.reloadData()
     }
@@ -131,7 +134,7 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
         let fileTypes = ["mp3", "wav", "m4a"]
         
         for fileType in fileTypes {
-            if let soundURL = Bundle.main.url(forResource: soundName, withExtension: fileType) {
+            if let soundURL = Bundle.main.url(forResource: "Sounds/\(soundName)", withExtension: fileType) {
                 do {
                     try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
                     try AVAudioSession.sharedInstance().setActive(true)
