@@ -124,7 +124,6 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
             player.stop()
         }
         
-        // Try different file types
         let fileTypes = ["mp3", "wav", "m4a"]
         
         for fileType in fileTypes {

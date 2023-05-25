@@ -37,6 +37,7 @@ class SettingsViewController: UIViewController {
         LinkLabel2.textColor = customGreen
         setupLinkLabel()
         setupLinkLabel2()
+        setupBrightnessSlider()
     }
     
     
@@ -60,6 +61,7 @@ class SettingsViewController: UIViewController {
     
     
     // Changes brightness
+    // ON SIMULATOR THE BRIGHTNESS WON'T CHANGE!
     @IBAction func brightnessSliderValue(_ sender: UISlider) {
         let brightnessValue = sender.value
         UIScreen.main.brightness = CGFloat(brightnessValue)

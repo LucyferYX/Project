@@ -67,9 +67,9 @@ class MainViewController: UIViewController {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     @IBAction func InfoButtonTap(_ sender: UIButton) {
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            basicActionAlert(title: "App information", message: "Creator: Liene Krista Neimane\nDate: 24.05.23.\nCourse: iOS Bootcamp\nv\(appVersion)")
+            basicActionAlert(title: "App information", message: "Creator: Liene Krista Neimane\nDate: 25.05.23.\nCourse: iOS Bootcamp\nv\(appVersion)")
         } else {
-            basicActionAlert(title: "App information", message: "Creator: Me\nDate: 24.05.23.\nCourse: B\nVersion information not available")
+            basicActionAlert(title: "App information", message: "Creator: Me\nDate: 25.05.23.\nCourse: B\nVersion information not available")
         }
     }
 
