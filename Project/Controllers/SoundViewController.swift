@@ -159,6 +159,7 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
     }
 }
 
+
 class SoundStateManager {
     static let shared = SoundStateManager()
     

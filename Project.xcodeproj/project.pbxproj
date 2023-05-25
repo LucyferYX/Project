@@ -19,6 +19,7 @@
 		7EACE7102A1816F300499336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE70E2A1816F300499336 /* LaunchScreen.storyboard */; };
 		7EACE71D2A18317D00499336 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE71C2A18317D00499336 /* SettingsViewController.swift */; };
 		7EACE7212A1838B300499336 /* KGRedHands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE7202A1838B300499336 /* KGRedHands.ttf */; };
+		7EEF2C8F2A201C7100AA9756 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 7EEF2C8E2A201C7100AA9756 /* Sounds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7EACE7112A1816F300499336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EACE71C2A18317D00499336 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7EACE7202A1838B300499336 /* KGRedHands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KGRedHands.ttf; path = ../../../../../Downloads/kg_red_hands/KGRedHands.ttf; sourceTree = "<group>"; };
+		7EEF2C8E2A201C7100AA9756 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		7EACE6F72A1816F000499336 = {
 			isa = PBXGroup;
 			children = (
+				7EEF2C8E2A201C7100AA9756 /* Sounds */,
 				7EACE7022A1816F000499336 /* Project */,
 				7EACE7012A1816F000499336 /* Products */,
 			);
@@ -183,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EEF2C8F2A201C7100AA9756 /* Sounds in Resources */,
 				7EACE7102A1816F300499336 /* LaunchScreen.storyboard in Resources */,
 				7EACE7212A1838B300499336 /* KGRedHands.ttf in Resources */,
 				7EACE70D2A1816F300499336 /* Assets.xcassets in Resources */,

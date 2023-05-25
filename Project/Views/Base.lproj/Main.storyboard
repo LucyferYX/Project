@@ -32,21 +32,6 @@
                                 <rect key="frame" x="40" y="415" width="304" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sGl-7s-nDX">
-                                <rect key="frame" x="104" y="274" width="184" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="brightnessSliderValue:" destination="Oie-gC-jn8" eventType="valueChanged" id="oNS-QN-jEe"/>
-                                    <action selector="brightnessSliderValueChanged:" destination="Oie-gC-jn8" eventType="valueChanged" id="8FS-Ke-K0i"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dU-sH-bgT">
-                                <rect key="frame" x="139" y="230" width="115" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="naQ-9M-SYB">
                                 <rect key="frame" x="104" y="406" width="184" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,20 +94,36 @@
                                 <color key="textColor" red="0.0938302055" green="0.49252080920000002" blue="0.2649967372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" name="AccentColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEt-fH-4Tl">
+                                <rect key="frame" x="149" y="286" width="95" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Click me!"/>
+                                <connections>
+                                    <action selector="testButtonTapped:" destination="Oie-gC-jn8" eventType="touchUpInside" id="6F9-fo-QSW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dU-sH-bgT">
+                                <rect key="frame" x="140" y="227" width="115" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KGRedHands" family="KG Red Hands" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HLh-tz-A1g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="IQ8-iE-tnt"/>
                     <connections>
-                        <outlet property="BrightnessLabel" destination="0dU-sH-bgT" id="w51-QV-3zT"/>
-                        <outlet property="BrightnessSlider" destination="sGl-7s-nDX" id="26H-yh-hzk"/>
                         <outlet property="ColourLabel" destination="1X6-LH-HGR" id="kYh-GP-5Mz"/>
                         <outlet property="ColourSegment" destination="rKk-eZ-Px7" id="gIx-Z0-yOz"/>
                         <outlet property="CreditsLabel" destination="rwi-Qk-ty2" id="Rke-te-vC9"/>
                         <outlet property="CreditsLabel2" destination="6fA-bZ-9ZE" id="JEt-VL-tQ2"/>
                         <outlet property="LinkLabel" destination="8OA-uc-u8a" id="NxY-9K-qt3"/>
                         <outlet property="LinkLabel2" destination="LLe-Xv-1lU" id="mf1-IN-rMd"/>
+                        <outlet property="TestButton" destination="cEt-fH-4Tl" id="t55-SM-g2A"/>
+                        <outlet property="TestLabel" destination="0dU-sH-bgT" id="LxQ-7m-qUY"/>
                         <outlet property="VolumeLabel" destination="SsO-C5-3Zj" id="cSA-bE-c4Q"/>
                         <outlet property="VolumeSlider" destination="naQ-9M-SYB" id="Pbj-Sy-age"/>
                     </connections>

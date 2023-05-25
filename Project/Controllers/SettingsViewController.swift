@@ -8,13 +8,14 @@
 import UIKit
 // MP for volume adjustment
 import MediaPlayer
+import AVFoundation
 
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var ColourLabel: UILabel!
     @IBOutlet weak var ColourSegment: UISegmentedControl!
-    @IBOutlet weak var BrightnessLabel: UILabel!
-    @IBOutlet weak var BrightnessSlider: UISlider!
+    @IBOutlet weak var TestLabel: UILabel!
+    @IBOutlet weak var TestButton: UIButton!
     @IBOutlet weak var VolumeLabel: UILabel!
     @IBOutlet weak var VolumeSlider: UISlider!
     @IBOutlet weak var CreditsLabel: UILabel!
@@ -29,7 +30,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = AppearanceManager.shared.isDarkModeEnabled ? UIColor.black : UIColor.white
         ColourLabel.textColor = AppearanceManager.shared.isDarkModeEnabled ? UIColor.white : UIColor.black
-        BrightnessLabel.textColor = AppearanceManager.shared.isDarkModeEnabled ? UIColor.white : UIColor.black
+        TestLabel.textColor = AppearanceManager.shared.isDarkModeEnabled ? UIColor.white : UIColor.black
         VolumeLabel.textColor = AppearanceManager.shared.isDarkModeEnabled ? UIColor.white : UIColor.black
         CreditsLabel.textColor = AppearanceManager.shared.isDarkModeEnabled ? UIColor.white : UIColor.black
         CreditsLabel2.textColor = AppearanceManager.shared.isDarkModeEnabled ? UIColor.white : UIColor.black
@@ -37,14 +38,12 @@ class SettingsViewController: UIViewController {
         LinkLabel2.textColor = customGreen
         setupLinkLabel()
         setupLinkLabel2()
-        setupBrightnessSlider()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.backgroundColor = AppearanceManager.shared.backgroundColor
-        setupBrightnessSlider()
         setupVolumeSlider()
         ColourSegment.selectedSegmentIndex = AppearanceManager.shared.selectedColorIndex
         delegate?.didUpdateSettings()
@@ -60,22 +59,27 @@ class SettingsViewController: UIViewController {
     }
     
     
-    // Changes brightness
-    // ON SIMULATOR THE BRIGHTNESS WON'T CHANGE!
-    @IBAction func brightnessSliderValue(_ sender: UISlider) {
-        let brightnessValue = sender.value
-        UIScreen.main.brightness = CGFloat(brightnessValue)
+    // Tests sound with button
+    var audioPlayer: AVAudioPlayer?
+    
+    @IBAction func testButtonTapped(_ sender: UIButton) {
+        playSound()
     }
     
-    func setupBrightnessSlider() {
-        let currentBrightness = UIScreen.main.brightness
-        BrightnessSlider.value = Float(currentBrightness)
+    func playSound() {
+        if let soundURL = Bundle.main.url(forResource: "Sounds/test", withExtension: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                audioPlayer?.play()
+            } catch {
+                print("Failed to load sound file.")
+            }
+        } else {
+            print("Unable to find sound file.")
+        }
     }
 
-    @IBAction func brightnessSliderValueChanged(_ sender: UISlider) {
-        let brightnessValue = sender.value
-        UIScreen.main.brightness = CGFloat(brightnessValue)
-    }
+
 
     
     // Changes volume
