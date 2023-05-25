@@ -74,7 +74,11 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
     func loadSounds() {
         sounds = [
             Sound(name: "Artic Wind", filename: "arctic-wind"),
-            Sound(name: "Rain drips in a bucket", filename: "rain-drips-in-a-bucket")
+            Sound(name: "Rain drips in a bucket", filename: "rain-drips-in-a-bucket"),
+            Sound(name: "Forest Summer", filename: "forest-summer"),
+            Sound(name: "Wind in trees with birds", filename: "wind-in-the-trees-with-birds"),
+            Sound(name: "Birds in action", filename: "birds-in-action"),
+            Sound(name: "Moderate Rain", filename: "rain-moderate-a")
 
         ]
         tableView.reloadData()
