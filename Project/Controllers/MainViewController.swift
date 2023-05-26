@@ -62,14 +62,23 @@ class MainViewController: UIViewController {
         }
     }
     
+    // Immediate update for background
+    @IBAction func themeSwitchValueChanged(_ sender: UISwitch) {
+        darkThemeIsOn(isOn: sender.isOn)
+        view.backgroundColor = AppearanceManager.shared.backgroundColor
+    }
     
     // Info button will display information about this project
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     @IBAction func InfoButtonTap(_ sender: UIButton) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yy"
+        let dateString = formatter.string(from: date)
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            basicActionAlert(title: "App information", message: "Creator: Liene Krista Neimane\nDate: 25.05.23.\nCourse: iOS Bootcamp\nv\(appVersion)")
+            basicActionAlert(title: "App information", message: "Creator: Liene Krista Neimane\nDate: \(dateString)\nCourse: iOS Bootcamp\nv\(appVersion)")
         } else {
-            basicActionAlert(title: "App information", message: "Creator: Me\nDate: 25.05.23.\nCourse: B\nVersion information not available")
+            basicActionAlert(title: "App information", message: "Creator: Liene Krista Neimane\nDate: \(dateString)\nCourse: iOS Bootcamp\nVersion information not available")
         }
     }
 

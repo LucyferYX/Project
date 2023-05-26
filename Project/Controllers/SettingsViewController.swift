@@ -6,7 +6,6 @@
 //
 
 import UIKit
-// MP for volume adjustment
 import MediaPlayer
 import AVFoundation
 
@@ -38,6 +37,11 @@ class SettingsViewController: UIViewController {
         LinkLabel2.textColor = customGreen
         setupLinkLabel()
         setupLinkLabel2()
+        if AppearanceManager.shared.isDarkModeEnabled {
+            ColourSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        } else {
+            ColourSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+        }
     }
     
     
@@ -47,6 +51,11 @@ class SettingsViewController: UIViewController {
         setupVolumeSlider()
         ColourSegment.selectedSegmentIndex = AppearanceManager.shared.selectedColorIndex
         delegate?.didUpdateSettings()
+        if AppearanceManager.shared.isDarkModeEnabled {
+            ColourSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        } else {
+            ColourSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+        }
     }
     
     
@@ -55,6 +64,17 @@ class SettingsViewController: UIViewController {
         let selectedColorIndex = sender.selectedSegmentIndex
         AppearanceManager.shared.selectedColorIndex = selectedColorIndex
         view.backgroundColor = AppearanceManager.shared.backgroundColor
+
+        if AppearanceManager.shared.isDarkModeEnabled {
+            // Dark mode is on
+            let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
+            ColourSegment.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        } else {
+            // Dark mode is off
+            let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            ColourSegment.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        }
+
         delegate?.didUpdateSettings()
     }
     
@@ -70,6 +90,7 @@ class SettingsViewController: UIViewController {
         if let soundURL = Bundle.main.url(forResource: "Sounds/test", withExtension: "mp3") {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                audioPlayer?.volume = audioVolume
                 audioPlayer?.play()
             } catch {
                 print("Failed to load sound file.")
@@ -80,9 +101,9 @@ class SettingsViewController: UIViewController {
     }
 
 
-
     
     // Changes volume
+    var audioVolume: Float = 0.5
     func setupVolumeSlider() {
         let volumeView = MPVolumeView()
         for view in volumeView.subviews {
@@ -94,13 +115,9 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func volumeSliderValueChanged(_ sender: UISlider) {
-        let volume = sender.value
-        let volumeView = MPVolumeView()
-        for view in volumeView.subviews {
-            if let slider = view as? UISlider {
-                slider.value = volume
-                break
-            }
+        audioVolume = sender.value
+        if let player = audioPlayer, player.isPlaying {
+            player.volume = audioVolume
         }
     }
     

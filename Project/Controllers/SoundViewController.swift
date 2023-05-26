@@ -20,6 +20,7 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
     var sounds: [Sound] = []
     var selectedSounds: Set<String> = []
     var soundPlayers: [String: AVAudioPlayer] = [:]
+    var allSounds: [Sound] = []
     
     
     override func viewDidLoad() {
@@ -55,15 +56,16 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
     
     func searchSounds(query: String?) {
         if let query = query, !query.isEmpty {
-            let filteredSounds = sounds.filter {
+            let filteredSounds = allSounds.filter {
                 $0.name.lowercased().contains(query.lowercased())
             }
             displaySounds(filteredSounds)
         } else {
             // No query or empty query, display all sounds
-            displaySounds(sounds)
+            displaySounds(allSounds)
         }
     }
+
     
     func displaySounds(_ soundsToDisplay: [Sound]) {
         sounds = soundsToDisplay
@@ -73,7 +75,7 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
     
     // All of the sounds
     func loadSounds() {
-        sounds = [
+        let loadedSounds = [
             Sound(name: "Artic Wind", filename: "arctic-wind"),
             Sound(name: "Rain drips in a bucket", filename: "rain-drips-in-a-bucket"),
             Sound(name: "Forest Summer", filename: "forest-summer"),
@@ -84,6 +86,8 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
             Sound(name: "Rain and Thunder", filename: "rain-and-thunder-4"),
             Sound(name: "Bird whistling", filename: "bird-whistling-a")
         ]
+        sounds = loadedSounds
+        allSounds = loadedSounds
         tableView.reloadData()
     }
     
