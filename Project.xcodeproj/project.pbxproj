@@ -11,6 +11,7 @@
 		7E39386F2A1D0EC100818DE6 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E39386E2A1D0EC100818DE6 /* SoundCell.swift */; };
 		7E3938712A1DF61500818DE6 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3938702A1DF61500818DE6 /* AppearanceManager.swift */; };
 		7E5D27732A1ACF3B00B933B1 /* JumpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */; };
+		7E9B52B82A26AA9E0016367C /* KGRedHands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E9B52B72A26AA9E0016367C /* KGRedHands.ttf */; };
 		7EACE7042A1816F000499336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE7032A1816F000499336 /* AppDelegate.swift */; };
 		7EACE7062A1816F000499336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE7052A1816F000499336 /* SceneDelegate.swift */; };
 		7EACE7082A1816F000499336 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE7072A1816F000499336 /* MainViewController.swift */; };
@@ -18,7 +19,6 @@
 		7EACE70D2A1816F300499336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE70C2A1816F300499336 /* Assets.xcassets */; };
 		7EACE7102A1816F300499336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE70E2A1816F300499336 /* LaunchScreen.storyboard */; };
 		7EACE71D2A18317D00499336 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACE71C2A18317D00499336 /* SettingsViewController.swift */; };
-		7EACE7212A1838B300499336 /* KGRedHands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EACE7202A1838B300499336 /* KGRedHands.ttf */; };
 		7EEF2C8F2A201C7100AA9756 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 7EEF2C8E2A201C7100AA9756 /* Sounds */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +27,7 @@
 		7E39386E2A1D0EC100818DE6 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		7E3938702A1DF61500818DE6 /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		7E5D27722A1ACF3B00B933B1 /* JumpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpButton.swift; sourceTree = "<group>"; };
+		7E9B52B72A26AA9E0016367C /* KGRedHands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGRedHands.ttf; sourceTree = "<group>"; };
 		7EACE7002A1816F000499336 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EACE7032A1816F000499336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EACE7052A1816F000499336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		7EACE70F2A1816F300499336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EACE7112A1816F300499336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EACE71C2A18317D00499336 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		7EACE7202A1838B300499336 /* KGRedHands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KGRedHands.ttf; path = ../../../../../Downloads/kg_red_hands/KGRedHands.ttf; sourceTree = "<group>"; };
 		7EEF2C8E2A201C7100AA9756 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,7 @@
 		7EACE71E2A18382800499336 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7EACE7202A1838B300499336 /* KGRedHands.ttf */,
+				7E9B52B72A26AA9E0016367C /* KGRedHands.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EEF2C8F2A201C7100AA9756 /* Sounds in Resources */,
+				7E9B52B82A26AA9E0016367C /* KGRedHands.ttf in Resources */,
 				7EACE7102A1816F300499336 /* LaunchScreen.storyboard in Resources */,
-				7EACE7212A1838B300499336 /* KGRedHands.ttf in Resources */,
 				7EACE70D2A1816F300499336 /* Assets.xcassets in Resources */,
 				7EACE70B2A1816F000499336 /* Main.storyboard in Resources */,
 			);

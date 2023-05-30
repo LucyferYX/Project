@@ -116,12 +116,13 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
     
     @objc func soundSwitchChanged(_ sender: UISwitch) {
         let sound = sounds[sender.tag]
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         if sender.isOn {
             selectedSounds.insert(sound.filename)
-            playSoundLoop(soundName: sound.filename)
+            appDelegate.playSoundLoop(soundName: sound.filename)
         } else {
             selectedSounds.remove(sound.filename)
-            stopSoundLoop(soundName: sound.filename)
+            appDelegate.stopSoundLoop(soundName: sound.filename)
         }
         
         // Updating the selected sounds
@@ -129,41 +130,6 @@ class SoundViewController: UITableViewController, UISearchBarDelegate {
         print("Selected sounds: \(selectedSounds)")
     }
     
-    // StackOverflow suggestion
-    func playSoundLoop(soundName: String) {
-        if let player = soundPlayers[soundName] {
-            player.stop()
-        }
-        
-        let fileTypes = ["mp3", "wav", "m4a"]
-        
-        for fileType in fileTypes {
-            if let soundURL = Bundle.main.url(forResource: "Sounds/\(soundName)", withExtension: fileType) {
-                do {
-                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-                    try AVAudioSession.sharedInstance().setActive(true)
-                    let player = try AVAudioPlayer(contentsOf: soundURL, fileTypeHint: AVFileType.init(rawValue: fileType).rawValue)
-                    player.numberOfLoops = -1 // Loop indefinitely
-                    player.play()
-                    soundPlayers[soundName] = player
-                    return
-                } catch {
-                    print("Unable to create audio player for sound: \(soundName)")
-                }
-            }
-        }
-        
-        print("Sound file not found for sound: \(soundName)")
-    }
-
-
-    
-    func stopSoundLoop(soundName: String) {
-        if let player = soundPlayers[soundName] {
-            player.stop()
-            soundPlayers.removeValue(forKey: soundName)
-        }
-    }
 }
 
 
